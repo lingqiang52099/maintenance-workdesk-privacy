@@ -1,0 +1,17 @@
+{
+  "name": "维修工作台",
+  "short_name": "维修工作台",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0F1115",
+  "theme_color": "#0F1115",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "icon-1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

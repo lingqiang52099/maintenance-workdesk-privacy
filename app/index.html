@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#0F1115">
+  <meta name="description" content="维修工作台 Maintenance Workbench：设备知识库、故障案例、拆装流程、设备原理、改善记录、密码库、团队共享与本地备份。">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="维修工作台">
+  <title>维修工作台</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icon-1024.png">
+  <link rel="stylesheet" href="styles.css?v=1.5.5">
+</head>
+<body>
+  <div class="app-bg" aria-hidden="true"></div>
+  <div id="app"></div>
+  <nav id="bottom-nav" class="bottom-nav">
+    <button data-page="home" class="nav-item active"><span class="nav-icon home-icon"></span><small>首页</small></button>
+    <button data-page="workshops" class="nav-item"><span class="nav-icon device-icon"></span><small>设备</small></button>
+    <button data-page="logs" class="nav-item"><span class="nav-icon log-icon"></span><small>工作日志</small></button>
+    <button data-page="electrical" class="nav-item"><span class="nav-icon electrical-icon"></span><small>电工知识</small></button>
+    <button data-page="team" class="nav-item"><span class="nav-icon team-icon"></span><small>团队</small></button>
+    <button data-page="me" class="nav-item"><span class="nav-icon me-icon"></span><small>我的</small></button>
+  </nav>
+  <div id="modal-root"></div>
+  <input id="file-input" type="file" accept="image/*" multiple hidden>
+  <script src="ui-interactions.js?v=1.5.5"></script>
+  <script src="app.bundle.js?v=1.5.5"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('./service-worker.js'));
+    }
+  </script>
+</body>
+</html>
